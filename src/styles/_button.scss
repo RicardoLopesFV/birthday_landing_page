@@ -1,0 +1,29 @@
+
+@use 'variables';
+
+.btn {
+    background-color: variables.$backgroundColor;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 32px;
+    text-transform: uppercase;
+    font-family: Poppins;
+    letter-spacing: 8px;
+    font-size: 48px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all ease .3s;
+
+    @media (max-width: 1024px) {
+        font-size: 28px;
+    }
+
+    @media (max-width: 640px) {
+        font-size: 18px;
+    }
+}
+
+.btn:hover {
+    background-color: lighten($color: variables.$backgroundColor, $amount: 15%);
+    scale: 1.1;
+}
